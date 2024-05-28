@@ -1,10 +1,25 @@
 import React from 'react'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
+import Search from './Search'
 
-const Main = () => {
+const Main = (props) => {
     return (
-        <div>
-            Main
-        </div>
+        <HelmetProvider>
+            <Helmet
+                titleTemplate="%s | Music Youtube"
+                defaultTitle="Music Youtube"
+                defer={false}
+            >
+                {props.title && <title>{props.title}</title>}
+                <meta name="description" content={props.description} />
+            </Helmet>
+
+            <main id='main' role='main'>
+                <Search />
+                {props.children}
+            </main>
+
+        </HelmetProvider >
     )
 }
 
