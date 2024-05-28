@@ -82,7 +82,7 @@ const Home = () => {
 export default Home
 ````
 
-## home 화면 만드는 방법
+## 기본셋팅 (APP.js)
 
 ````bash
 import React from 'react'
