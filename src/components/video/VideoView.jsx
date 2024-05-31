@@ -25,6 +25,7 @@ const VideoView = ({ videos }) => {
                 </div>
             ))}
         </div>
+
     )
 }
 
