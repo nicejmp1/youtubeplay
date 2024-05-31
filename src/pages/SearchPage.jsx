@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Main from '../components/section/Main'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Loading from '../components/section/Loading';
 import VideoView from '../components/video/VideoView';
 
