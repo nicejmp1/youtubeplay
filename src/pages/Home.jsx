@@ -7,30 +7,10 @@ const Home = () => {
   const [videos, setVideos] = useState([]);
   const [programmingVideos, setProgrammingVideos] = useState([]);
 
-  const latestMusicCacheKey = 'latestMusicVideos';
-  const latestMusicCacheTimeKey = 'latestMusicCacheTime';
-  const programmingCacheKey = 'programmingVideos';
-  const programmingCacheTimeKey = 'programmingCacheTime';
-  const cacheDuration = 24 * 60 * 60 * 1000;
-
   useEffect(() => {
-    const cachedVideos = localStorage.getItem(latestMusicCacheKey);
-    const cachedTime = localStorage.getItem(latestMusicCacheTimeKey);
-    const cachedProgrammingVideos = localStorage.getItem(programmingCacheKey);
-    const cachedProgrammingTime = localStorage.getItem(programmingCacheTimeKey);
-
-    if (cachedVideos && cachedTime && (Date.now() - parseInt(cachedTime) < cacheDuration)) {
-      setVideos(JSON.parse(cachedVideos));
-    } else {
-      fetchLatestMusicVideos();
-    }
-
-    if (cachedProgrammingVideos && cachedProgrammingTime && (Date.now() - parseInt(cachedProgrammingTime) < cacheDuration)) {
-      setProgrammingVideos(JSON.parse(cachedProgrammingVideos));
-    } else {
-      fetchProgrammingVideos();
-    }
-  }, [cacheDuration]);
+    fetchLatestMusicVideos();
+    fetchProgrammingVideos();
+  }, []);
 
   const fetchLatestMusicVideos = async () => {
     const oneMonthAgo = new Date();
@@ -50,9 +30,6 @@ const Home = () => {
       });
       const videos = response.data.items;
       setVideos(videos);
-
-      localStorage.setItem(latestMusicCacheKey, JSON.stringify(videos));
-      localStorage.setItem(latestMusicCacheTimeKey, Date.now().toString());
     } catch (error) {
       console.error('Error fetching latest music videos:', error);
     }
@@ -74,9 +51,6 @@ const Home = () => {
       });
       const programmingVideos = response.data.items;
       setProgrammingVideos(programmingVideos);
-
-      localStorage.setItem(programmingCacheKey, JSON.stringify(programmingVideos));
-      localStorage.setItem(programmingCacheTimeKey, Date.now().toString());
     } catch (error) {
       console.error('Error fetching programming videos:', error);
     }
