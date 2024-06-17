@@ -15,96 +15,96 @@ import { GiAzulFlake } from "react-icons/gi";
 
 export const headerMenus = [
     {
-        title: "Top100",
+        title: "HTML",
         icon: <FaRegPlayCircle />,
-        src: "/search/플레이리스트top100"
+        src: "/search/Html coading"
     },
     {
-        title: "추천리스트",
+        title: "CSS",
         icon: <MdLibraryMusic />,
-        src: "/search/추천playList"
+        src: "/search/Css coading"
     },
     {
-        title: "신나는노래",
+        title: "Javascript",
         icon: <SiBytedance />,
-        src: "/search/신나는플레이리스트"
+        src: "/search/Javascript coading"
     },
     {
-        title: "힙합",
+        title: "PHP",
         icon: <SiFireship />,
-        src: "/search/힙합모음플레이리스트"
+        src: "/search/PHP coading"
     },
     {
-        title: "인디밴드",
+        title: "React",
         icon: <BsFillMusicPlayerFill />,
-        src: "/search/인디밴드플레이리스트"
+        src: "/search/React coading"
     },
     {
-        title: "아이돌",
+        title: "Node.js ",
         icon: <SiMusicbrainz />,
-        src: "/search/아이돌플레이리스트"
+        src: "/search/Node.js Coading"
     },
     {
-        title: "클래식",
+        title: "ASMR Coading",
         icon: <GiMusicalNotes />,
-        src: "/search/클래식플레이리스트"
+        src: "/search/ASMR Coading"
     },
     {
-        title: "J-POP",
+        title: "Coading News",
         icon: <Gi3dMeeple />,
-        src: "/search/일본,J-pop 플레이리스트"
+        src: "/search/Coading News, 코딩뉴스"
     },
     {
-        title: "팝송",
+        title: "디자인",
         icon: <GiAzulFlake />,
-        src: "/search/popsong 플레이리스트"
+        src: "/search/디자인,Figma, design"
     }
 ]
 
 export const searchKeyword = [
     {
-        title: "잔잔한",
-        src: "/search/잔잔한"
+        title: "HTML",
+        src: "/search/HTML"
     },
     {
-        title: "힙합",
-        src: "/search/힙합"
+        title: "CSS",
+        src: "/search/CSS"
     },
     {
-        title: "아이돌",
-        src: "/search/아이돌"
+        title: "PHP",
+        src: "/search/PHP"
     },
     {
-        title: "클래식",
-        src: "/search/클래식"
+        title: "SCSS",
+        src: "/search/SCSS"
     },
     {
-        title: "애니OST",
-        src: "/search/애니OST"
+        title: "Javascript",
+        src: "/search/Javascript"
     },
     {
-        title: "드라마",
-        src: "/search/드라마"
+        title: "React",
+        src: "/search/React"
     },
     {
-        title: "발라드",
-        src: "/search/발라드"
+        title: "Node.js",
+        src: "/search/Node.js"
     },
     {
-        title: "팝송",
-        src: "/search/팝송"
+        title: "Vue.js",
+        src: "/search/Vue.js"
     },
     {
-        title: "인디밴드",
-        src: "/search/인디밴드"
+        title: "Next.js",
+        src: "/search/Next.js"
     },
     {
-        title: "신나는",
-        src: "/search/신나는"
+        title: "Figma",
+        src: "/search/Figma"
     },
     {
-        title: "Edm",
-        src: "/search/Edm"
+        title: "Coading",
+        src: "/search/Coading"
     },
 ]
 

@@ -5,7 +5,7 @@ const Logo = () => {
         <h1 className='header__logo'>
             <a href="/">
                 <em></em>
-                <span>musicmatch <br /><i>Youtube</i></span>
+                <span>All coading <br /><i>Youtube</i></span>
             </a>
         </h1>
     )
