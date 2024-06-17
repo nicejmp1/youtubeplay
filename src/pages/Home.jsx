@@ -30,7 +30,7 @@ const Home = () => {
     } else {
       fetchProgrammingVideos();
     }
-  }, []);
+  }, [cacheDuration]);
 
   const fetchLatestMusicVideos = async () => {
     const oneMonthAgo = new Date();
