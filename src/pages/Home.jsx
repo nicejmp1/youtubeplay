@@ -36,7 +36,9 @@ const Home = () => {
   };
 
   const fetchProgrammingVideos = async () => {
-    const formattedDate = new Date().toISOString(); // 현재 시간 기준으로 검색
+    const oneMonthAgo = new Date();
+    oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
+    const formattedDate = oneMonthAgo.toISOString();
 
     try {
       const response = await axios.get(`https://www.googleapis.com/youtube/v3/search`, {
@@ -58,16 +60,19 @@ const Home = () => {
 
   return (
     <Main title="Coding YouTube" description="모든 coding을 모아둔 채널입니다.">
-        <div className='main__info'>
-            <h1>추천영상</h1>
-            <p>ASMR YouTube</p>
-            <VideoView videos={videos} /> 
-        </div>
-        <div className="main__sub">
-            <h1>Programming</h1>
-            <p>React Programming</p>
-            <VideoView videos={programmingVideos} /> 
-        </div>
+      <div className='main__title'>
+        <h1>모든 Coading 유튜브 영상을 모아 두었습니다.</h1>
+      </div>
+      <div className='main__info'>
+        <h1>추천영상</h1>
+        <p>ASMR YouTube</p>
+        <VideoView videos={videos} />
+      </div>
+      <div className="main__sub">
+        <h1>Programming</h1>
+        <p>React Programming</p>
+        <VideoView videos={programmingVideos} />
+      </div>
     </Main>
   );
 };
